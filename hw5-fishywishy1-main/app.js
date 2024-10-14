@@ -18,11 +18,11 @@ function duel() {
     const p2TimeToDefeat = (p2Health + p2Armor + p2Armor) / p1DPS;
     const comp = p1TimeToDefeat - p2TimeToDefeat;
 
-    if (comp > 0){
+   if (comp > .1){
         alert("player 1 will win in " + Math.round(p2TimeToDefeat) + "seconds!");
-    } if (comp <0){
+    } if (comp < -.1){
         alert("player 2 will win in " + Math.round(p1TimeToDefeat) + "seconds!");
-    } else {
+    } if (comp > -.2 && comp < .2) {
         alert("Round ends in a draw");
     }
 }
