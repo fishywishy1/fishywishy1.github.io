@@ -11,14 +11,14 @@ function duel() {
 
     // TODO Do the simulation an alert the user of the results!
     if (p1Health === null || p1Armor === null || p1DPS === null || p2Health === null || p2Armor === null || p2DPS === null) {
-        alert("Please fill out all fields before contiuning.");
+        alert("Please fill out all fields before continuing.");
     }
 
-    const p1TimeToDefeat = (p1Health + p1Armor + p1Armor) / p2DPS;
-    const p2TimeToDefeat = (p2Health + p2Armor + p2Armor) / p1DPS;
+    const p1TimeToDefeat = (p1Health + p1Armor * 2) / p2DPS;
+    const p2TimeToDefeat = (p2Health + p2Armor * 2) / p1DPS;
     const comp = p1TimeToDefeat - p2TimeToDefeat;
 
-   if (comp > .1){
+    if (comp > .1){
         alert("player 1 will win in " + Math.round(p2TimeToDefeat) + "seconds!");
     } if (comp < -.1){
         alert("player 2 will win in " + Math.round(p1TimeToDefeat) + "seconds!");
@@ -26,4 +26,3 @@ function duel() {
         alert("Round ends in a draw");
     }
 }
-
